@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import gsap from "gsap";
+
 import IntroOverlay from "../components/introOverlay";
 import Banner from "../components/banner";
 import Cases from "../components/cases";
-import gsap from "gsap";
+import Categories from "../components/categories";
 
 let tl = gsap.timeline();
 
@@ -57,13 +59,15 @@ const Home = ({ dimensions }) => {
   useEffect(() => {
     let vh = dimensions.height * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
-  }, [dimensions.width]);
+  }, [dimensions.width, dimensions.height]);
 
   return (
     <>
       {animationComplete === false ? <IntroOverlay /> : ""}
       <Banner />
       <Cases />
+      <Categories />
+      {/* <div style={{height: "500px", background: "grey"}}>Hallo</div> */}
     </>
   );
 };

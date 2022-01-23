@@ -5,6 +5,15 @@
 @import "./components/banner.scss";
 @import "./components/cases.scss";
 @import "./components/navigation.scss";
+@import "./components/ongoing.scss";
+@import "./components/categories.scss";
+@import "./components/about.scss";
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body,
 html {
@@ -19,7 +28,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .container {
   width: 1560px;
   min-width: 1560px;
@@ -99,7 +107,8 @@ html {
     height: 50vh;
     height: calc(var(--vh, 1vh) * 50);
     position: absolute;
-    bottom: 0;
+    top: 50vh;
+    top: calc(var(--vh, 1vh) * 50);
     width: 100%;
     z-index: 8;
     .overlay-bottom {
