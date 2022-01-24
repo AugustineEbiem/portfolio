@@ -3,6 +3,7 @@ import hoverEffect from 'hover-effect';
 import luxy from "luxy.js";
 
 import Ongoing from "./ongoing"
+import Languages from "./languages"
 
 import image1 from '../assets/photo1.jpg';
 import image2 from '../assets/photo2.jpg';
@@ -74,6 +75,8 @@ const Categories = () => {
   return(
       
     <div id="luxy">
+        <Languages />
+
         <h1 className="cat-text text-1 luxy-el" data-speed-y="40" data-offset="-200">Cata</h1>
         <h1 className="cat-text text-2 luxy-el" data-speed-y="40" data-offset="-510">Logue</h1>
 

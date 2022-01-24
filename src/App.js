@@ -62,6 +62,16 @@ function App() {
         ))}
       </div>
       <Navigation />
+      {/* <div>
+        <div className="animation">
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
+        </div>
+      </div>   */}
     </>
   );
 }

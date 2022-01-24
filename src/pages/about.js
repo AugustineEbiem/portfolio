@@ -36,7 +36,7 @@ const About = ({history}) => {
         const tlv = gsap.timeline({
             scrollTrigger: {
                 trigger: elBText,
-                start: "top 95%",
+                start: "top bottom",
             }
         });
 
@@ -73,6 +73,25 @@ const About = ({history}) => {
         }});
         
         
+        gsap.to(".fixed-misc", {
+            y: 250,
+            scrollTrigger: {
+                trigger: ".about-blurb",
+                start: "top bottom",
+                scrub: 1,
+            }
+        })
+
+        gsap.to(".abt-feat-img", {
+            y: -180,
+            scrollTrigger: {
+                trigger: ".abt-feat-img",
+                start: "top bottom",
+                scrub: 1,
+            }
+        })
+
+
     }, [])
 
     return(

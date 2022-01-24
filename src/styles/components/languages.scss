@@ -1,0 +1,68 @@
+.menu-list {
+  background-color: #003fff;
+  position: relative;
+  padding: 1vh 0;
+
+  .menu-item {
+    position: relative;
+  }
+
+  .menu-title {
+    font-size: 4rem;
+    text-transform: uppercase;
+    padding: 4vh 4vw;
+    z-index: 1;
+
+    &.clone {
+      position: absolute;
+      top: 0;
+      pointer-events: none;
+      color: white;
+      clip-path: inset(0 100% 0 0);
+      transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    &:not(.clone) {
+      margin: 2vh 0;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+      color: transparent;
+
+      &:hover {
+        cursor: pointer;
+
+        ~ .clone {
+          clip-path: inset(0 0 0 0);
+        }
+        ~.menu-image-container .menu-image {
+          opacity: 1;
+          transform: scale(1.1);
+          filter: blur(0) brightness(1);
+        }
+      }
+    }
+  }
+
+  .menu-image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .menu-image {
+    opacity: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1px) brightness(3);
+    transform: scale(1);
+
+    width: 100%;
+    height: 100%;
+
+    transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+}

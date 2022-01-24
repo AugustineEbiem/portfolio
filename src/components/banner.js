@@ -56,15 +56,34 @@ const Banner = () => {
         <div className='row'>
           <h2>
             <div className='line'>
-              <span>Creating unique brands is</span>
+              <span>A UI and Full Stack Developer</span>
             </div>
             <div className='line'>
-              <span>what we do.</span>
+              <span>from <i className="location">South Shields</i>
+              
+              {/* <iframe
+                title={"src"}
+                className='resp-iframe' 
+                src={
+                  "https://player.vimeo.com/video/91284753?autoplay=1&loop=1&autopause=0&muted=1"
+                }
+                width="640"
+                height="360"
+                frameborder="0"
+                webkitallowfullscreen
+                mozallowfullscreen
+                allowfullscreen
+                allow="autoplay; fullscreen"
+                controls="0"
+              ></iframe> */}
+              </span>
             </div>
           </h2>
+
+
           <div className='btn-row'>
             <a href='/'>
-              More about us <RightArrow />
+              More about me <RightArrow />
             </a>
           </div>
         </div>

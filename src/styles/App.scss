@@ -8,6 +8,7 @@
 @import "./components/ongoing.scss";
 @import "./components/categories.scss";
 @import "./components/about.scss";
+@import "./components/languages.scss";
 
 
 * {
@@ -28,6 +29,41 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+// body {font-family: "Monument";overflow: hidden;}
+.animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color:#222222;
+  color: white;
+  overflow: hidden;
+  justify-content: center;
+  z-index: 1000;
+  width: 100%;
+}
+.animate {
+  font-size: 100px;
+  text-transform: uppercase;
+  color: #e0e0e0;
+  animation: animate 10s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #39ff14;
+}
+
 .container {
   width: 1560px;
   min-width: 1560px;
@@ -81,7 +117,8 @@ html {
     .overlay-top {
       position: absolute;
       height: 100%;
-      width: 33.333vw;
+      // width: 33.333vw;
+      width: 23.333vw;
       background: $black;
       bottom: 0;
       left: 0;
@@ -114,7 +151,8 @@ html {
     .overlay-bottom {
       position: absolute;
       height: 100%;
-      width: 33.333vw;
+      // width: 33.333vw;
+      width: 23.333vw;
       background: $black;
       bottom: 0;
       right: 66.666%;

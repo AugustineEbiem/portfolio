@@ -1,18 +1,12 @@
-import React from 'react';
-
+import React, { useEffect } from 'react';
 import ftImage from "../../assets/img3.jpg";
 
 const AboutFeatured = () => {
     return(
         <div className="about-featured">
             <div className="container">
-                <div
-                    style={{ 
-                        height: '600px',
-                        overflow: 'hidden'
-                     }}
-                >
-                    <img src={ftImage} alt="Futured" />
+                <div className="img-wrap">
+                    <img className="abt-feat-img" src={ftImage} alt="Back Futured" />
                 </div>
             </div>
         </div>
