@@ -59,7 +59,7 @@ const Banner = () => {
               <span>A UI and Full Stack Developer</span>
             </div>
             <div className='line'>
-              <span>from <i className="location">South Shields</i>
+              <span>based in <i className="location">South Shields</i>
               
               {/* <iframe
                 title={"src"}
@@ -82,7 +82,7 @@ const Banner = () => {
 
 
           <div className='btn-row'>
-            <a href='/'>
+            <a href='/about-us'>
               More about me <RightArrow />
             </a>
           </div>

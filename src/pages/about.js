@@ -41,7 +41,9 @@ const About = ({history}) => {
         });
 
         //Hero Side Images Animation
-        tl.from(".side-image.right", 1.2, {y: 1280, ease: Power3.easeOut})
+        tl
+        .set(".banner .row .main-text .abt-line span", {autoAlpha: 1})
+        .from(".side-image.right", 1.2, {y: 1280, ease: Power3.easeOut})
         .from(".side-image.right img", 2, {scale: 1.6, ease: Power3.easeOut}, .2)
         .from(".side-image.left", 1.4, {y: 1280, ease: Power3.easeOut}, .2)
         .from(".side-image.left img", 2, {scale: 1.6, ease: Power3.easeOut}, .2)
@@ -74,16 +76,16 @@ const About = ({history}) => {
         
         
         gsap.to(".fixed-misc", {
-            y: 250,
+            y: 300,
             scrollTrigger: {
-                trigger: ".about-blurb",
+                trigger: ".scroll",
                 start: "top bottom",
                 scrub: 1,
             }
         })
 
         gsap.to(".abt-feat-img", {
-            y: -180,
+            y: -350,
             scrollTrigger: {
                 trigger: ".abt-feat-img",
                 start: "top bottom",
@@ -92,7 +94,7 @@ const About = ({history}) => {
         })
 
 
-    }, [])
+    }, [history.action, imageRvl])
 
     return(
         <div>

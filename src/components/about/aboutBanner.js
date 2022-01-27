@@ -37,7 +37,7 @@ const Banner = () => {
           <span>Scroll down</span>
         </div>
       </div>
-      <div className="fixed-misc">Visual Artist and Photographer</div>
+      <div className="fixed-misc">UI Design and Full Stack Developer</div>
     </div>
   )
 }

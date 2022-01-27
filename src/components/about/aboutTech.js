@@ -1,4 +1,5 @@
 import React from "react"
+import language from "../../assets/languages.png";
 
 const AboutTech = ({blurbTextRef}) => {
   
@@ -7,7 +8,7 @@ const AboutTech = ({blurbTextRef}) => {
       <div className="container">
         <div className="inner-blurb">
           <div style={{height: '700px'}} className="images">
-            
+            <img className="lang-stack" src={language} alt='einlanguage' />
           </div>
           <div className="content">
             <h3 className="blurb-content-title">The ability to create</h3>

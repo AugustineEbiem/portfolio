@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 import hoverEffect from 'hover-effect';
 import luxy from "luxy.js";
 
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import Ongoing from "./ongoing"
 import Languages from "./languages"
 
@@ -13,10 +16,25 @@ import image5 from '../assets/photo5.jpg';
 import image6 from '../assets/photo6.jpg';
 import overlay from '../assets/displacement.png';
 
+// gsap.registerPlugin(ScrollTrigger);
 
 const Categories = () => {
+
+    // useEffect(() => {
+    //     gsap.to(".on-hyphen", {
+    //         width: "30%",
+    //         scrollTrigger: {
+    //             trigger: ".on-hyphen",
+    //             start: "top bottom",
+    //             scrub: 1,
+    //             markers: true
+    //         }
+    //     })
+
+    // }, [])
+
   useEffect(() => {
-    //   luxy.init();
+      luxy.init();
       var image_animate = new hoverEffect({
           parent: document.querySelector('#photo1'),
           intensity: 0.5,
@@ -74,51 +92,124 @@ const Categories = () => {
 
   return(
       
-    <div id="luxy">
+    <div id="luxy" className="luxy-wrap">
         <Languages />
 
-        <h1 className="cat-text text-1 luxy-el" data-speed-y="40" data-offset="-200">Cata</h1>
-        <h1 className="cat-text text-2 luxy-el" data-speed-y="40" data-offset="-510">Logue</h1>
-
         <div className="cat-container">
-            <div className="photo-row">
+            <h1 className="cat-text text-1 luxy-el" data-speed-y="35" >Port</h1>
+            <h1 className="cat-text text-2 luxy-el" data-speed-y="35" >Folio</h1>
+            
+            <div className="cat-bg-text-wrap">
+                <p className="luxy-el cat-bg-text"
+                    data-speed-x="15" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text"
+                    data-speed-x="-10" data-speed-y="35" data-horizontal="100" 
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text cat-bg-text-stroke cat-bg-text-margin" 
+                    data-speed-x="-15" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text " 
+                    data-speed-x="10" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text cat-bg-text-margin" 
+                    data-speed-x="-25" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text cat-bg-text-stroke cat-bg-text-margin" 
+                    data-speed-x="10" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text" 
+                    data-speed-x="-5" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text cat-bg-text-stroke" 
+                    data-speed-x="-20" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text cat-bg-text-margin" 
+                    data-speed-x="-10" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text" 
+                    data-speed-x="5" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+                <p className="luxy-el cat-bg-text" 
+                    data-speed-x="-15" data-speed-y="35" data-horizontal="100"  
+                    data-offset="-800"
+                >
+                    lorem ipsum is the shit that i also say i will be the man or who whants to be the lady man
+                </p>
+            </div>
+            
+            <div className="photo-row" style={{ marginTop: 0 }}>
                 <div className="photo" id="photo1">
                     <span>
-                        <h2>Avery Caldwell</h2>
+                        <h2>ReactJs, NodeJS</h2>
                     </span>
                 </div>
                 <div className="photo" id="photo2">
                     <span>
-                        <h2>Toni Jefferson</h2>
+                        <h2>Python, MySQL</h2>
                     </span>
                 </div>
             </div>
             <div className="photo-row">
                 <div className="photo" id="photo3">
                     <span>
-                        <h2>Spencer Mcdonnell</h2>
+                        <h2>ReactJs, Gsap</h2>
                     </span>
                 </div>
                 <div className="photo" id="photo4">
                     <span>
-                        <h2>Danial Spencer</h2>
+                        <h2>ReactJs Python</h2>
                     </span>
                 </div>
             </div>
-            <div className="photo-row">
+            <div className="photo-row"  style={{ marginBottom: 0 }}>
                 <div className="photo" id="photo5">
                     <span>
-                        <h2>Annabell Bautista</h2>
+                        <h2>NextJs Firebase</h2>
                     </span>
                 </div>
                 <div className="photo" id="photo6">
                     <span>
-                        <h2>Aizah Thatcher</h2>
+                        <h2>Php, MySql</h2>
                     </span>
                 </div>
             </div>
+        
         </div>
 
+        <h1 className="luxy-el" data-speed-y="35" className="ongoing-title">
+                ON <span className="on-hyphen"></span> GOING
+            </h1>
         <Ongoing />
 
     </div>    

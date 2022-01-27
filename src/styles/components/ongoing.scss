@@ -1,14 +1,26 @@
-// @import '../css/mixins';
 @import '../mixins';
-// :root {
-//     --main-color: #3664e8;
-// }
 
-// body {
-//     -webkit-font-smoothing: antialiased;
-//     font-family: 'Josefin Sans', sans-serif;
-// }
-
+.ongoing-proj {
+    padding-top: 3rem;
+    background: black;
+    .ongoing-title {
+        color: white;
+        text-align: center;
+        font-size: 7rem;
+        margin-bottom: 2rem;
+        .on-hyphen {
+            display: inline-block;
+            position: relative;
+            height: 20px;
+            width: 7%;
+            margin: auto;
+            margin-bottom: 28px;
+            background: black;
+            // transition: 0.5s all;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            // transform: translateY(-50%);
+        }
+    }
     .project-item {
         scroll-behavior: smooth;
         position: relative;
@@ -25,7 +37,7 @@
             }
             img {
                 position: absolute;
-                left: 48vw;
+                left: 40vw;
                 top: 0;
                 width: auto;
                 height: clamp(400px, 40vw, 40vw);
@@ -41,6 +53,7 @@
                 z-index: 1;
                 text-align: left;
                 font-size: 20px;
+                mix-blend-mode: difference;
                 .info-block-header {
                     margin-bottom: 20px;
                     color: white;
@@ -124,3 +137,4 @@
         
         }
     }
+}

@@ -30,7 +30,7 @@ const AboutBlurb = () => {
                 <img src={fist} alt='zefist' />
             </div>
             <div className="bottom-left">
-                <img src={flower} alt='zefist' />
+                <img src={flower} alt='zeflower' />
             </div>
           </div>
         </div>

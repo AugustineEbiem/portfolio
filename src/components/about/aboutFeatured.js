@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ftImage from "../../assets/img3.jpg";
 
 const AboutFeatured = () => {

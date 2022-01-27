@@ -33,6 +33,7 @@
     }
   }
   .row {
+    overflow: hidden;
     @include media("<=tablet") {
       flex-direction: column;
     }
@@ -46,8 +47,8 @@
         }
       }
       .case-details {
-        // width: 33.3333vw;
-        width: 20.3333vw;
+        width: 33.3333vw;
+        // width: 20.3333vw;
         height: 50vh;
         height: calc(var(--vh, 1vh) * 50);
         display: flex;

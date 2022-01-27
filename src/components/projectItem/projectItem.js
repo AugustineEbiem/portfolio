@@ -155,7 +155,7 @@ export default function ProjectItem( {project, itemIndex} ) {
             <div className={cn("info-block", {'as-active': state.active})}>
                 <p className='info-block-header'>
                     <span>
-                        0{itemIndex}
+                        #0{itemIndex}
                     </span>
                 </p>
 

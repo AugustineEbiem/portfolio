@@ -11,31 +11,31 @@ export const pageData = [
     {
         url: img1,
         title: "Fairy Dust",
-        info: ["Branding", "ÜI Designs", "Typograpy"]
+        info: ["ReactJs", "NodeJs", "MongoDB"]
     },
     {
         url: img2,
         title: "Mc Fries",
-        info: ["Shooting", "Motion Design", "Promoting"]
+        info: ["Gatsby", "Motion Design", "GraphQl"]
     },
     {
         url: img3,
         title: "Doughnuts",
-        info: ["Typography", "Designs", "Branging"]
+        info: ["NextJs", "Gsap", "Docker"]
     },
     {
         url: img4,
         title: "Magic Mind",
-        info: ["Illustrations", "Social Media", "Branding"]
+        info: ["ReactJs", "Firebase", "TailWind"]
     },
     {
         url: img5,
         title: "2019",
-        info: ["Design", "ÜI", "Brandy"]
+        info: ["ReactJs", "Python", "MySQLite"]
     },
     {
         url: img6,
         title: "Migrate",
-        info: ["to", "western", "world"]
+        info: ["ReactJs", "Php", "MySQL"]
     }
 ]

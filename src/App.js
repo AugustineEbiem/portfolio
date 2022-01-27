@@ -1,15 +1,18 @@
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";
-import { gsap } from "gsap";
 import "./styles/App.scss";
 import Header from "./components/header";
 import Navigation from "./components/navigation";
+import ScrollCircle from './components/scrollCircle';
 
 import CaseStudies from "./pages/caseStudies";
 import Approach from "./pages/approach";
 import Services from "./pages/services";
 import About from "./pages/about";
 import Home from "./pages/home";
+
+
+
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
@@ -31,6 +34,8 @@ function debounce(fn, ms) {
 }
 
 function App() {
+  // const location = useLocation();
+
   const [dimensions, setDimensions] = React.useState({
     height: window.innerHeight,
     width: window.innerWidth
@@ -38,7 +43,7 @@ function App() {
 
   useEffect(() => {
     // prevents flashing
-    gsap.to("body", 0, { css: { visibility: "visible" } });
+    // gsap.to("body", 0, { css: { visibility: "visible" } });
     const debouncedHandleResize = debounce(function handleResize() {
       setDimensions({
         height: window.innerHeight,
@@ -62,16 +67,13 @@ function App() {
         ))}
       </div>
       <Navigation />
-      {/* <div>
-        <div className="animation">
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-          <h1 className="animate">loading<span>loading</span>loading<span>loading</span></h1>
-        </div>
-      </div>   */}
+      <ScrollCircle />
+      
+      
+
+      {/* {console.log(window.location.href.split("/").pop())} */}
+      {/* { (location.pathname === "/") && () } */}
+      {/* <Loading /> */}
     </>
   );
 }

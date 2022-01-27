@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import { withRouter } from 'react-router-dom';
+import Loading from "../components/loading";
 
 import IntroOverlay from "../components/introOverlay";
 import Banner from "../components/banner";
@@ -10,30 +11,46 @@ import Categories from "../components/categories";
 let tl = gsap.timeline();
 
 const homeAnimation = (completeAnimation, firstLoad) => {
+  // html {
+  //   // overflow: hidden;
+  // }
+  // #root {
+  //   // overflow: hidden;
+  //   // position: fixed;
+  //   width: 100%;
+  // }
   if(firstLoad === 'POP') {
-    console.log(firstLoad)
+    
     tl
-    // .to("body", 0, { css: { overflow: "hidden" } })
+    .to("#luxy", 0, 
+      { css: { zIndex: "-4" } 
+    })
+    .to("html", 0, {
+      css: { overflow: "hidden" },
+    })
+    // .to(".header", 0, {
+    //   css: { visibility: "hidden" },
+    // })
+    .to("#root", 0, 
+      { css: { overflow: "hidden", position: "fixed" } 
+    })
     // Loading starts
-    // .to(".animate", {
-    //   delay: 2,
-    //   duration: .5,
-    //   opacity: 0
+    .to(".animate", {
+      delay: 2,
+      duration: .5,
+      opacity: 0
+    })
+    .to(".animation", {
+      delay: 0.5,
+      duration: 1,
+      y: "100%",
+      ease: "power4.out",
+      zIndex: -1,
+      display: "none" 
+    })
+    // .to(".header", 0, {
+    //   css: { visibility: "visible" },
     // })
-    // .to(".animation", {
-    //   delay: 0.5,
-    //   duration: 1,
-    //   y: "100%",
-    //   ease: "power4.out",
-    //   zIndex: -1,
-    //   autoAlpha: 0 
-    // })
-    //hide preloader and preloader-container
-    // .to("animation", {
-    //   zIndex: -1,
-    // })
-    // Loading stops
-    // .to("body", 0, { css: { overflow: "hidden" } })
     .from(".line span", 1.8, {
       y: 100,
       ease: "power4.out",
@@ -58,7 +75,6 @@ const homeAnimation = (completeAnimation, firstLoad) => {
     })
     .to(".intro-overlay", 0, {
       css: { display: "none" },
-      // autoAlpha: 0
     })
     .from(".case-image img", 1.6, {
       scale: 1.4,
@@ -68,15 +84,24 @@ const homeAnimation = (completeAnimation, firstLoad) => {
         amount: 0.4
       },
       onComplete: completeAnimation
-    });
+    })
+    .to(".scroll-wrap", 0, 
+      { css: { visibility: "visible" } 
+    })
+    .to("html", 0, 
+      { css: { overflow: "visible" } 
+    })
+    .to("#root", 0, 
+      { css: { overflow: "visible", position: "relative" } 
+    })
+    .to("#luxy", 0, 
+      { css: { zIndex: "4" } 
+    })
+  } else {
+    gsap.to(".scroll-wrap", 0, 
+      { css: { visibility: "visible" } 
+    })
   }
-  // else {
-  //   tl
-  //   .to(".intro-overlay", 0, {
-  //     css: { display: "none" },
-  //     // autoAlpha: 0
-  //   })
-  // }
 };
 
 const Home = ({ dimensions, history }) => {
@@ -97,16 +122,14 @@ const Home = ({ dimensions, history }) => {
   }, [dimensions.width, dimensions.height]);
 
   return (
-    <>
-    {(history.action === "POP") && console.log('true')}
-      
-      
+    <div style={{ background: "black" }}>
+
+      {(history.action === 'POP') && <Loading />}
       {(animationComplete === false && history.action === "POP") ? <IntroOverlay /> : ""}
       <Banner />
       <Cases />
       <Categories />
-      {/* <div style={{height: "500px", background: "grey"}}>Hallo</div> */}
-    </>
+    </div>
   );
 };
 
