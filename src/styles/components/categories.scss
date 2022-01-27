@@ -130,3 +130,10 @@ margin-left: -2000px;
     top: -25px;
     right: 0px;
 }
+.photo-row {
+    .photo {
+        canvas {
+            width: 480px!important;
+        }
+    }
+}

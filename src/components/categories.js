@@ -8,12 +8,20 @@ import luxy from "luxy.js";
 import Ongoing from "./ongoing"
 import Languages from "./languages"
 
-import image1 from '../assets/photo1.jpg';
-import image2 from '../assets/photo2.jpg';
-import image3 from '../assets/photo3.jpg';
-import image4 from '../assets/photo4.jpg';
-import image5 from '../assets/photo5.jpg';
-import image6 from '../assets/photo6.jpg';
+import imperiumDisplay from '../assets/projects/imperium/1.jpg';
+import imperium from '../assets/projects/imperium/2.jpg';
+import goMoneyDisplay from '../assets/projects/gomoney/1.jpg';
+import goMoney from '../assets/projects/gomoney/2.jpg';
+import prachProDisplay from '../assets/projects/prachpro/1.jpg';
+import prachPro from '../assets/projects/prachpro/2.jpg';
+import virtualClosetsDisplay from '../assets/projects/virtual-closets/1.jpg';
+import virtualClosets from '../assets/projects/virtual-closets/2.jpg';
+import fundmylaptopDisplay from '../assets/projects/fundmylaptop/1.jpg';
+import fundmylaptop from '../assets/projects/fundmylaptop/2.jpg';
+import jaizDisplay from '../assets/projects/jaiz/1.jpg';
+import jaiz from '../assets/projects/jaiz/2.jpg';
+
+
 import overlay from '../assets/displacement.png';
 
 // gsap.registerPlugin(ScrollTrigger);
@@ -38,8 +46,8 @@ const Categories = () => {
       var image_animate = new hoverEffect({
           parent: document.querySelector('#photo1'),
           intensity: 0.5,
-          image1: image6,
-          image2: image1,
+          image1: imperiumDisplay,
+          image2: imperium,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
@@ -47,8 +55,8 @@ const Categories = () => {
       var image_animate2 = new hoverEffect({
           parent: document.querySelector('#photo2'),
           intensity: 0.5,
-          image1: image2,
-          image2: image5,
+          image1: goMoneyDisplay,
+          image2: goMoney,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
@@ -56,8 +64,8 @@ const Categories = () => {
       var image_animate3 = new hoverEffect({
           parent: document.querySelector('#photo3'),
           intensity: 0.5,
-          image1: image3,
-          image2: image6,
+          image1: prachProDisplay,
+          image2: prachPro,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
@@ -65,8 +73,8 @@ const Categories = () => {
       var image_animate4 = new hoverEffect({
           parent: document.querySelector('#photo4'),
           intensity: 0.5,
-          image1: image4,
-          image2: image2,
+          image1: virtualClosetsDisplay,
+          image2: virtualClosets,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
@@ -74,8 +82,8 @@ const Categories = () => {
       var image_animate5 = new hoverEffect({
           parent: document.querySelector('#photo5'),
           intensity: 0.5,
-          image1: image5,
-          image2: image2,
+          image1: fundmylaptopDisplay,
+          image2: fundmylaptop,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
@@ -83,8 +91,8 @@ const Categories = () => {
       var image_animate6 = new hoverEffect({
           parent: document.querySelector('#photo6'),
           intensity: 0.5,
-          image1: image1,
-          image2: image6,
+          image1: jaizDisplay,
+          image2: jaiz,
           displacementImage: overlay,
           imagesRatio: 1.7
       })
