@@ -26,7 +26,7 @@ import overlay from '../assets/displacement.png';
 
 // gsap.registerPlugin(ScrollTrigger);
 
-const Categories = () => {
+const Categories = ({pageWidth}) => {
 
     // useEffect(() => {
     //     gsap.to(".on-hyphen", {
@@ -104,8 +104,8 @@ const Categories = () => {
         <Languages />
 
         <div className="cat-container">
-            <h1 className="cat-text text-1 luxy-el" data-speed-y="35" >Port</h1>
-            <h1 className="cat-text text-2 luxy-el" data-speed-y="35" >Folio</h1>
+            <h1 className="cat-text text-1 luxy-el" data-speed-y="45" >Port</h1>
+            <h1 className="cat-text text-2 luxy-el" data-speed-y="45" >Folio</h1>
             
             <div className="cat-bg-text-wrap">
                 <p className="luxy-el cat-bg-text"
@@ -176,46 +176,52 @@ const Categories = () => {
                 </p>
             </div>
             
-            <div className="photo-row" style={{ marginTop: 0 }}>
-                <div className="photo" id="photo1">
-                    <span>
-                        <h2>ReactJs, NodeJS</h2>
-                    </span>
-                </div>
-                <div className="photo" id="photo2">
-                    <span>
-                        <h2>Python, MySQL</h2>
-                    </span>
+            <div className="container">
+                <div className="port-row">
+
+                    <div className="photo-row" style={{ marginTop: 0 }}>
+                        <div className="photo" id="photo1">
+                            <span>
+                                <h2>ReactJs, NodeJS</h2>
+                            </span>
+                        </div>
+                        <div className="photo" id="photo2">
+                            <span>
+                                <h2>Python, MySQL</h2>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="photo-row">
+                        <div className="photo" id="photo3">
+                            <span>
+                                <h2>ReactJs, Gsap</h2>
+                            </span>
+                        </div>
+                        <div className="photo" id="photo4">
+                            <span>
+                                <h2>ReactJs Python</h2>
+                            </span>
+                        </div>
+                    </div>
+                    <div className="photo-row"  style={{ marginBottom: 0 }}>
+                        <div className="photo" id="photo5">
+                            <span>
+                                <h2>NextJs Firebase</h2>
+                            </span>
+                        </div>
+                        <div className="photo" id="photo6">
+                            <span>
+                                <h2>Php, MySql</h2>
+                            </span>
+                        </div>
+                    </div>
+                
                 </div>
             </div>
-            <div className="photo-row">
-                <div className="photo" id="photo3">
-                    <span>
-                        <h2>ReactJs, Gsap</h2>
-                    </span>
-                </div>
-                <div className="photo" id="photo4">
-                    <span>
-                        <h2>ReactJs Python</h2>
-                    </span>
-                </div>
-            </div>
-            <div className="photo-row"  style={{ marginBottom: 0 }}>
-                <div className="photo" id="photo5">
-                    <span>
-                        <h2>NextJs Firebase</h2>
-                    </span>
-                </div>
-                <div className="photo" id="photo6">
-                    <span>
-                        <h2>Php, MySql</h2>
-                    </span>
-                </div>
-            </div>
-        
+
         </div>
 
-        <h1 className="luxy-el" data-speed-y="35" className="ongoing-title">
+        <h1 className="ongoing-title">
                 ON <span className="on-hyphen"></span> GOING
             </h1>
         <Ongoing />

@@ -1,6 +1,9 @@
 .cases {
   height: 50vh;
   height: calc(var(--vh, 1vh) * 50);
+  // @include media("<=tablet") {
+  //   padding: 0 16px;
+  // }
   .cases-navigation {
     position: absolute;
     bottom: 0px;
@@ -14,23 +17,23 @@
     @include media("<=tablet") {
       display: none;
     }
-    .cases-arrow {
-      background: rgba(0, 0, 0, 0.4);
-      height: 72px;
-      width: 72px;
-      border-radius: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg {
-        color: $white;
-        height: 28px;
-        width: 28px;
-      }
-      &.disabled {
-        opacity: 0.3;
-      }
-    }
+    // .cases-arrow {
+    //   background: rgba(0, 0, 0, 0.4);
+    //   height: 72px;
+    //   width: 72px;
+    //   border-radius: 100%;
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   svg {
+    //     color: $white;
+    //     height: 28px;
+    //     width: 28px;
+    //   }
+    //   &.disabled {
+    //     opacity: 0.3;
+    //   }
+    // }
   }
   .row {
     overflow: hidden;

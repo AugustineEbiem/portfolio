@@ -35,19 +35,19 @@ const homeAnimation = (completeAnimation, firstLoad) => {
       { css: { overflow: "hidden", position: "fixed" } 
     })
     // Loading starts
-    .to(".animate", {
-      delay: 2,
-      duration: .5,
-      opacity: 0
-    })
-    .to(".animation", {
-      delay: 0.5,
-      duration: 1,
-      y: "100%",
-      ease: "power4.out",
-      zIndex: -1,
-      display: "none" 
-    })
+          // .to(".animate", {
+          //   delay: 2,
+          //   duration: .5,
+          //   opacity: 0
+          // })
+          // .to(".animation", {
+          //   delay: 0.5,
+          //   duration: 1,
+          //   y: "100%",
+          //   ease: "power4.out",
+          //   zIndex: -1,
+          //   display: "none" 
+          // })
     // .to(".header", 0, {
     //   css: { visibility: "visible" },
     // })
@@ -124,11 +124,11 @@ const Home = ({ dimensions, history }) => {
   return (
     <div style={{ background: "black" }}>
 
-      {(history.action === 'POP') && <Loading />}
+      {/* {(history.action === 'POP') && <Loading />} */}
       {(animationComplete === false && history.action === "POP") ? <IntroOverlay /> : ""}
       <Banner />
       <Cases />
-      <Categories />
+      <Categories pageWidth={dimensions.width} />
     </div>
   );
 };
