@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import hoverEffect from 'hover-effect';
 import luxy from "luxy.js";
 
-// import { gsap } from 'gsap';
+import gsap from 'gsap';
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Ongoing from "./ongoing"
@@ -28,6 +28,12 @@ import overlay from '../assets/displacement.png';
 
 const Categories = ({pageWidth}) => {
 
+    var scrollText = "STYLE";
+
+	var splitScrollText = scrollText.split('').map((item, index) => {
+	  return <span style={{ transitionDelay: `calc(0ms + ${index} * 20ms)` }} className="char" key={index}>{item}</span>;
+	})
+
     // useEffect(() => {
     //     gsap.to(".on-hyphen", {
     //         width: "30%",
@@ -40,6 +46,10 @@ const Categories = ({pageWidth}) => {
     //     })
 
     // }, [])
+
+    // const handlePhotoOneClick = () => {
+    //     alert ('cool')
+    // }
 
   useEffect(() => {
       luxy.init();
@@ -96,13 +106,27 @@ const Categories = ({pageWidth}) => {
           displacementImage: overlay,
           imagesRatio: 1.7
       })
+
+      gsap.timeline({
+        delay: 1,
+        defaults: {
+            duration: 1.25,
+            stagger: 0.125,
+            ease: "expo.inOut",
+        },
+    })
+    .fromTo(".card__image--wrapper", { yPercent: 110 }, { yPercent: 0 }, 0)
+    .fromTo(".card__image--outer", { yPercent: -110 }, { yPercent: 0 }, 0)
+    .set(".cards__wrapper, .card", { pointerEvents: "all" }, "-=1");
+
   }, []);
 
   return(
-      
-    <div id="luxy" className="luxy-wrap">
-        <Languages />
 
+    <div id="luxy" className="luxy-wrap">
+        {/* <a className="photo-1-link" style={{color: "white"}} href="">In My Mis</a> */}
+        <Languages />
+    	
         <div className="cat-container">
             <h1 className="cat-text text-1 luxy-el" data-speed-y="45" >Port</h1>
             <h1 className="cat-text text-2 luxy-el" data-speed-y="45" >Folio</h1>
@@ -180,39 +204,58 @@ const Categories = ({pageWidth}) => {
                 <div className="port-row">
 
                     <div className="photo-row" style={{ marginTop: 0 }}>
-                        <div className="photo" id="photo1">
-                            <span>
-                                <h2>ReactJs, NodeJS</h2>
-                            </span>
-                        </div>
-                        <div className="photo" id="photo2">
-                            <span>
-                                <h2>Python, MySQL</h2>
-                            </span>
+                        <a href="#" className="photo-wrap">
+                            <div className="photo" id="photo1">
+                                <span className="stack">
+                                    <h2>ReactJs, NodeJS</h2>
+                                </span>
+                                <div className="card__text">
+                                    <span className="card__text--inner" data-splitting>
+                                        <span className="word">
+                                            {splitScrollText}
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                        </a>
+                        <div className="photo-wrap">
+                            <div className="photo" id="photo2">
+                                <span className="stack">
+                                    <h2>Python, MySQL</h2>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div className="photo-row">
-                        <div className="photo" id="photo3">
-                            <span>
-                                <h2>ReactJs, Gsap</h2>
-                            </span>
+                        <div className="photo-wrap">
+                            <div className="photo" id="photo3">
+                                <span className="stack">
+                                    <h2>ReactJs, Gsap</h2>
+                                </span>
+                            </div>
                         </div>
-                        <div className="photo" id="photo4">
-                            <span>
-                                <h2>ReactJs Python</h2>
-                            </span>
+                        <div className="photo-wrap">
+                            <div className="photo" id="photo4">
+                                <span className="stack">
+                                    <h2>ReactJs Python</h2>
+                                </span>
+                            </div>
                         </div>
                     </div>
                     <div className="photo-row"  style={{ marginBottom: 0 }}>
-                        <div className="photo" id="photo5">
-                            <span>
-                                <h2>NextJs Firebase</h2>
-                            </span>
-                        </div>
-                        <div className="photo" id="photo6">
-                            <span>
-                                <h2>Php, MySql</h2>
-                            </span>
+                        <div className="photo-wrap">
+                            <div className="photo" id="photo5">
+                                <span className="stack">
+                                    <h2>NextJs Firebase</h2>
+                                </span>
+                            </div>
+                        </div>  
+                        <div className="photo-wrap">
+                            <div className="photo" id="photo6">
+                                <span className="stack">
+                                    <h2>Php, MySql</h2>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 
